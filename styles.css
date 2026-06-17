@@ -402,7 +402,7 @@ h2 {
 
 .section-head {
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 h2 {
@@ -413,11 +413,21 @@ h2 {
 
 .method-copy,
 .section-intro {
-  max-width: 720px;
+  max-width: none;
   margin-top: 22px;
   color: rgba(21, 21, 21, 0.76);
   font-size: 16px;
   line-height: 1.64;
+}
+
+.method-copy {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.method-copy p,
+.section-intro {
+  max-width: 720px;
 }
 
 .method-copy p,
@@ -523,7 +533,7 @@ h2 {
 
 .details-copy {
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 .detail-mosaic {
@@ -919,12 +929,12 @@ h2 {
   .method-copy,
   .details-copy {
     display: grid;
-    grid-template-columns: 220px minmax(0, 1fr);
-    gap: 44px;
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .method-copy {
-    margin-top: 30px;
+    margin-top: 22px;
   }
 
   .flow-steps {
