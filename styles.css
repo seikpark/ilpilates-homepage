@@ -799,6 +799,15 @@ h2 {
     --page: 48px;
   }
 
+  .site-header,
+  .hero,
+  .studio-story,
+  .reviews-section,
+  .closing-section {
+    width: min(100%, var(--max));
+    margin-inline: auto;
+  }
+
   .site-header {
     min-height: 72px;
     padding-block: 0;
