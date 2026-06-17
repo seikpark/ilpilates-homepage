@@ -8,7 +8,7 @@
   --muted: rgba(17, 17, 17, 0.58);
   --page: 16px;
   --radius: 6px;
-  --max: 1180px;
+  --max: 1440px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -17,11 +17,15 @@
 }
 
 html {
+  max-width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
   background: var(--paper);
   color: var(--ink);
@@ -423,13 +427,25 @@ h2 {
   line-height: 1.62;
 }
 
+.story-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.story-thumbs img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 .equipment-section {
   padding-bottom: 48px;
 }
 
 .snap-gallery,
-.teacher-track,
-.review-track {
+.teacher-track {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(274px, 86vw);
@@ -442,14 +458,12 @@ h2 {
 
 .snap-gallery::-webkit-scrollbar,
 .teacher-track::-webkit-scrollbar,
-.review-track::-webkit-scrollbar,
 .hero-note::-webkit-scrollbar {
   display: none;
 }
 
 .snap-gallery figure,
-.teacher-card,
-.review-item {
+.teacher-card {
   scroll-snap-align: start;
 }
 
@@ -601,11 +615,17 @@ h2 {
 }
 
 .review-item {
-  min-height: 300px;
+  min-height: 0;
   padding: 22px;
   background: var(--mist);
   border-top: 3px solid var(--sage);
   border-radius: var(--radius);
+}
+
+.review-track {
+  display: grid;
+  gap: 12px;
+  margin-top: 32px;
 }
 
 .review-item p {
@@ -744,8 +764,7 @@ h2 {
 
   .snap-gallery,
   .detail-mosaic,
-  .teacher-track,
-  .review-track {
+  .teacher-track {
     grid-auto-columns: minmax(330px, 42vw);
   }
 
@@ -933,8 +952,7 @@ h2 {
 
   .snap-gallery,
   .detail-mosaic,
-  .teacher-track,
-  .review-track {
+  .teacher-track {
     grid-auto-flow: initial;
     overflow: visible;
     scroll-snap-type: none;

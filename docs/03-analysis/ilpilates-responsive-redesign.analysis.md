@@ -22,7 +22,7 @@ PDCA Design 문서의 핵심 구현 항목과 실제 `index.html`, `styles.css`,
 - [x] reduced motion 대응: reveal 애니메이션뿐 아니라 이미지 hover transition도 비활성화한다.
 - [x] 전체 이미지 자산 유지: `images/` 안의 19개 이미지가 계속 모두 참조된다.
 - [x] 로고/파비콘 유지: `images/logo.png`가 favicon, apple-touch-icon, header logo로 사용된다.
-- [x] CSS/JS 캐시 버전 갱신: `20260616-7`로 갱신했다.
+- [x] CSS/JS 캐시 버전 갱신: 최신 정적 자산 버전으로 갱신했다.
 - [x] GitHub Pages 배포 구조 유지: 정적 root 배포 방식을 바꾸지 않았다.
 
 ## Missing Items
