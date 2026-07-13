@@ -730,6 +730,12 @@ h2 {
   box-shadow: var(--shadow-soft);
 }
 
+@media (max-width: 979px) {
+  .teachers-section {
+    padding-bottom: 136px;
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -988,13 +994,14 @@ h2 {
   }
 
   .teacher-track {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
   }
 
   .teacher-card {
-    grid-template-columns: minmax(190px, 0.45fr) minmax(0, 1fr);
-    gap: 22px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    align-items: start;
+    gap: 12px;
     padding: 16px;
   }
 
